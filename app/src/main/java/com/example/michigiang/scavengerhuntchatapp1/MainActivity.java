@@ -139,6 +139,11 @@ public class MainActivity extends AppCompatActivity {
                     listText.setFocusable(false);
                     listText.setKeyListener(null);
                     finalizeButton.setEnabled(false);
+                } else {
+                    timerText.setText("" + String.format("%d : %d",
+                            TimeUnit.MILLISECONDS.toMinutes(time),
+                            TimeUnit.MILLISECONDS.toSeconds(0) -
+                                    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(0))));
                 }
             }
 
